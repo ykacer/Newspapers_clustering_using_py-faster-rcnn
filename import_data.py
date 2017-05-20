@@ -24,7 +24,7 @@ owner['flickrid'] = '?'
 owner['name'] = 'UCL'
 
 
-main_path = 'data_papers_for_faster-rcnn'
+main_path = '/home/kyoucef/py-faster-rcnn/data/NewsPapers/UCL'
 annotation_path = main_path+'/Annotations/'
 imagesets_path = main_path+'/ImageSets/'
 jpegimages_path = main_path+'/JPEGImages/'
@@ -131,20 +131,20 @@ for file_mask in list_mask:
         }
 	objects = []
         for x1,y1,x2,y2,lbl in izip(anno_x1,anno_y1,anno_x2,anno_y2,anno_label):
-		x1 = x1-x1*(x1<0)
-		y1 = y1-y1*(y1<0)
+		x1 = x1-x1*(x1<0)+1
+		y1 = y1-y1*(y1<0)+1
 		t = 0
-		if x2>=width:
+		if x2>=(width):
 			x2 = width-1
 			t=1
-		if y2>=height:
+		if y2>=(height):
 			y2 = height-1
 			t=1
 		if lbl=='t':
 			label_name = 'text'
 		else:
 			label_name = 'illustration'
-		if (x1==1) | (y1==1):
+		if (x1==1) | (y1==1) | (y2==(height-1)) | (x2==(width-1)):
 			t = 1
 		o = {'object':
 			{
