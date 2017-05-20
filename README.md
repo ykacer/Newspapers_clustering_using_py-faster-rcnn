@@ -50,6 +50,7 @@ We present here after some testing results for text/illustration
 <p align="center">
   <img src="5m_text_det.jpg" width="300"/>
 </p>
+
 #### illustration
 <p align="center">
   <img src="5m_illustration_det.jpg" width="300"/>
@@ -60,6 +61,7 @@ We present here after some testing results for text/illustration
 <p align="center">
   <img src="40_text_det.jpg" width="300"/>
 </p>
+
 #### illustration
 <p align="center">
   <img src="40_illustration_det.jpg" width="300"/>
@@ -70,6 +72,7 @@ We present here after some testing results for text/illustration
 <p align="center">
   <img src="52_text_det.jpg" width="300"/>
 </p>
+
 #### illustration
 <p align="center">
   <img src="52_illustration_det.jpg" width="300"/>
