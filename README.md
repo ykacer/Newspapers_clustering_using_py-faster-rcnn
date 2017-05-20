@@ -8,7 +8,7 @@ We use [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn) code from 
 
 The used dataset is an ensemble of 102 Russian newpapers pages annotated and 
 taken from [UCL Machine learning](https://archive.ics.uci.edu/ml/machine-learning-databases/00306/) site.
-This is the dataset we use to tune faster-rcnn code.
+This is the dataset we use to tune faster-rcnn code (68 for training, 34 for testing)
 
 We show below an example with ground truth:
 
@@ -40,6 +40,37 @@ Now go to `yourhome/py-faster-rcnn` and run the following command line
 
 `./experiments/scripts/faster_rcnn_alt_opt.sh 0 VGG_CNN_M_1024 newspapers`
 
-You will get test results into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/results`, containing bounding boxes for text and for illustration, for each test image present into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/ImageSets/Main/test.txt
+You will get test results into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/results`, containing bounding boxes for text and for illustration, for each test image present into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/ImageSets/Main/test.txt`
 
-## Results`
+## Results
+
+We present here after some testing results for text/illustration
+### example
+#### text
+<p align="center">
+  <img src="5m_text_det.jpg" width="300"/>
+</p>
+#### illustration
+<p align="center">
+  <img src="5m_illustration_det.jpg" width="300"/>
+</p>
+
+### example
+#### text
+<p align="center">
+  <img src="40_text_det.jpg" width="300"/>
+</p>
+#### illustration
+<p align="center">
+  <img src="40_illustration_det.jpg" width="300"/>
+</p>
+
+### example
+#### text
+<p align="center">
+  <img src="52_text_det.jpg" width="300"/>
+</p>
+#### illustration
+<p align="center">
+  <img src="52_illustration_det.jpg" width="300"/>
+</p>
