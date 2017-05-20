@@ -25,8 +25,21 @@ We show below an example with ground truth:
 </p>
 
 ## formatting data 
-To use faster-rcnn code, we need to create xml annotation files like Pascal-VOC challenge.
-But first of all, clone our fork of [py-faster-rcnn](https://github.com/ykacer/py-faster-rcnn) code into your home for example.
-Then open `import_data.py`, fill `main_path` variable with following path `yourhome/py-faster-rcnn/data/NewsPapers` and run this script
+To use faster-rcnn code, we need to reformate dataset  like Pascal-VOC challenge (comprising xml annotation files for bouding boxes).
+
+But first of all, clone our fork of [py-faster-rcnn](https://github.com/ykacer/py-faster-rcnn) code into your home for example. This forl contains appropriate to deal with our newspapers dataset. 
+Then open `import_data.py`, fill `main_path` variable with following path `yourhome/py-faster-rcnn/data/NewsPapers/UCL` and run it :
 
 `python import_data.py`
+
+It will create appropriate reformatting of our newspapers dataset into  `yourhome/py-faster-rcnn/data/NewsPapers/UCL`
+
+## training/testing
+
+Now go to `yourhome/py-faster-rcnn` and run the following command line
+
+`./experiments/scripts/faster_rcnn_alt_opt.sh 0 VGG_CNN_M_1024 newspapers`
+
+You will get test results into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/results`, containing bounding boxes for text and for illustration, for each test image present into `yourhome/py-faster-rcnn/data/NewsPapers/UCL/ImageSets/Main/test.txt
+
+## Results`
