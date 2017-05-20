@@ -24,7 +24,7 @@ We show below an example with ground truth:
   <img src="1_m.png" width="300"/>
 </p>
 
-## formatting data 
+## Formatting data 
 To use faster-rcnn code, we need to reformate dataset  like Pascal-VOC challenge (comprising xml annotation files for bouding boxes).
 
 But first of all, clone our fork of [py-faster-rcnn](https://github.com/ykacer/py-faster-rcnn) code into your home for example. This forl contains appropriate to deal with our newspapers dataset. 
@@ -34,7 +34,7 @@ Then open `import_data.py`, fill `main_path` variable with following path `yourh
 
 It will create appropriate reformatting of our newspapers dataset into  `yourhome/py-faster-rcnn/data/NewsPapers/UCL`
 
-## training/testing
+## Training/testing
 
 Now go to `yourhome/py-faster-rcnn` and run the following command line
 
